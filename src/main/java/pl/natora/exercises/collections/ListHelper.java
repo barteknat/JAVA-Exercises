@@ -1,20 +1,20 @@
 package pl.natora.exercises.collections;
-import java.util.HashSet;
+import java.util.ArrayList;
 import java.util.List;
-import java.util.Set;
 
 public class ListHelper {
 
+    static List<Integer> unrepeatableList;
+
     public static void removeDuplicates(List<Integer> list) {
-        Set<Integer> set = new HashSet<>();
+        List<Integer> newList = new ArrayList<>();
         if (list != null && !list.isEmpty()) {
             for (int number : list) {
-                set.add(number);
+                if (!newList.contains(number)) {
+                    newList.add(number);
+                }
             }
-            System.out.println(set);
-        }
-        else {
-            System.out.println("List is null or empty");
+            unrepeatableList = newList;
         }
     }
 }
