@@ -1,13 +1,12 @@
 package pl.natora.exercises.collections;
-import java.util.List;
-import java.util.Arrays;
+import java.util.*;
 
 public class ListApplication {
 
     public static void main(String[] args) {
-        List<Integer> list = Arrays.asList(5,4,5,4,6,7,5,1,2,-7,-7,2,100,4,20,-1);
+        List<Integer> list = new ArrayList<>(Arrays.asList(7, 5, 7, 5, 8));
         ListHelper.removeDuplicates(list);
-        System.out.println(ListHelper.unrepeatableList);
-        assert ListHelper.unrepeatableList.equals(Arrays.asList(5,4,6,7,1,2));
+        System.out.println(list);
+        assert list.equals(Arrays.asList(7,5,8));
     }
 }
